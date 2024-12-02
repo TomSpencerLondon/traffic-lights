@@ -1,5 +1,6 @@
 package traffic;
 
+import traffic.ui.InvalidChoiceException;
 import traffic.ui.Printer;
 
 import java.io.IOException;
@@ -9,42 +10,33 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Print welcome message
         Printer.printWelcomeMessage();
 
-        // Input number of roads
         int numberOfRoads = getPositiveIntegerInput(scanner, "Input the number of roads: ");
 
-        // Input interval
         int interval = getPositiveIntegerInput(scanner, "Input the interval: ");
 
-        // Menu loop
         while (true) {
-            clearConsole(); // Clear the console before showing the menu
+            clearConsole();
             waitForEnter(scanner);
-            Printer.printMenu(); // Print menu
+            Printer.printMenu();
 
-            int choice = getValidMenuChoice(scanner); // Get valid menu choice
-
-            // Handle the user's choice
-            switch (choice) {
-                case 1:
-                    Printer.printStubMessage("add"); // Print one-line stub
-                    break;
-                case 2:
-                    Printer.printStubMessage("delete"); // Print one-line stub
-                    break;
-                case 3:
-                    Printer.printStubMessage("system"); // Print one-line stub
-                    break;
-                case 0:
-                    Printer.printGoodbyeMessage();
-                    scanner.close();
-                    return; // Exit program
+            try {
+                int choice = getValidMenuChoice(scanner);
+                switch (choice) {
+                    case 1 -> Printer.printStubMessage("add");
+                    case 2 -> Printer.printStubMessage("delete");
+                    case 3 -> Printer.printStubMessage("system");
+                    case 0 -> {
+                        Printer.printGoodbyeMessage();
+                        scanner.close();
+                        return;
+                    }
+                }
+            } catch (InvalidChoiceException e) {
+                Printer.printStubMessage("incorrect option");
             }
 
-            // Wait for user to press Enter before the next iteration
-            clearConsole();
         }
     }
 
@@ -73,23 +65,19 @@ public class Main {
         }
     }
 
-    private static int getValidMenuChoice(Scanner scanner) {
-        String input = scanner.nextLine();
-        int choice = -1;
+    private static int getValidMenuChoice(Scanner scanner) throws InvalidChoiceException {
+        String input = scanner.nextLine(); // Read the entire input as a string
         try {
-            choice = Integer.parseInt(input); // Attempt to parse input as an integer
+            int choice = Integer.parseInt(input); // Attempt to parse input as an integer
             if (choice >= 0 && choice <= 3) {
                 return choice; // Return valid menu choice
-            } else {
-                System.out.println("incorrect option");
             }
         } catch (NumberFormatException e) {
-            // Input was not a valid integer, fall through to print error
-            System.out.println("incorrect option");
+            // Input was not a valid integer
         }
-
-        return choice;
+        throw new InvalidChoiceException("incorrect option"); // Throw exception for invalid input
     }
+
 
     private static void waitForEnter(Scanner scanner) {
         scanner.nextLine();
