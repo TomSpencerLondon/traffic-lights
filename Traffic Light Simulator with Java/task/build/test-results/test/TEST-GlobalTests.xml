@@ -1,29 +1,161 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="GlobalTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-12-02T09:15:29" hostname="M-NCDP2JJ7C9" time="0.068">
+<testsuite name="GlobalTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-12-02T12:15:23" hostname="M-NCDP2JJ7C9" time="0.515">
   <properties/>
-  <testcase name="start" classname="GlobalTests" time="0.068"/>
+  <testcase name="start" classname="GlobalTests" time="0.515"/>
   <system-out><![CDATA[?[1;31m
 Start test 1?[0m
 Welcome to the traffic management system!
 Input the number of roads: > 5
 Input the interval: > 3
 Menu:
-1. Add
-2. Delete
-3. System
+1. Add road
+2. Delete road
+3. Open system
 0. Quit
 > 0
 Bye!
 ?[1;31m
 Start test 2?[0m
+Welcome to the traffic management system!
+Input the number of roads: > 5
+Input the interval: > 3
+Menu:
+1. Add road
+2. Delete road
+3. Open system
+0. Quit
+> 1
+add
+> 
+Menu:
+1. Add road
+2. Delete road
+3. Open system
+0. Quit
+> 0
+Bye!
 ?[1;31m
 Start test 3?[0m
+Welcome to the traffic management system!
+Input the number of roads: > 5
+Input the interval: > 3
+Menu:
+1. Add road
+2. Delete road
+3. Open system
+0. Quit
+> 2
+delete
+> 
+Menu:
+1. Add road
+2. Delete road
+3. Open system
+0. Quit
+> 0
+Bye!
 ?[1;31m
 Start test 4?[0m
+Welcome to the traffic management system!
+Input the number of roads: > 5
+Input the interval: > 3
+Menu:
+1. Add road
+2. Delete road
+3. Open system
+0. Quit
+> 3
+system
+> 
+Menu:
+1. Add road
+2. Delete road
+3. Open system
+0. Quit
+> 0
+Bye!
 ?[1;31m
 Start test 5?[0m
+Welcome to the traffic management system!
+Input the number of roads: > asd
+Incorrect input. Try again: Input the number of roads: > -1
+Incorrect input. Try again: Input the number of roads: > 6-
+Incorrect input. Try again: Input the number of roads: > 0
+Incorrect input. Try again: Input the number of roads: > Hello world!
+Incorrect input. Try again: Input the number of roads: > 5
+Input the interval: > asd
+Incorrect input. Try again: Input the interval: Incorrect input. Try again: Input the interval: > -1
+Incorrect input. Try again: Input the interval: > 6-
+Incorrect input. Try again: Input the interval: > 0
+Incorrect input. Try again: Input the interval: > Hello world!
+Incorrect input. Try again: Input the interval: > 5
+Menu:
+1. Add road
+2. Delete road
+3. Open system
+0. Quit
+> 0
+Bye!
 ?[1;31m
 Start test 6?[0m
+Welcome to the traffic management system!
+Input the number of roads: > 5
+Input the interval: > 3
+Menu:
+1. Add road
+2. Delete road
+3. Open system
+0. Quit
+> asd
+incorrect option
+> 
+Menu:
+1. Add road
+2. Delete road
+3. Open system
+0. Quit
+> -1
+incorrect option
+> 
+Menu:
+1. Add road
+2. Delete road
+3. Open system
+0. Quit
+> 6-
+incorrect option
+> 
+Menu:
+1. Add road
+2. Delete road
+3. Open system
+0. Quit
+> Hello world!
+incorrect option
+> 
+Menu:
+1. Add road
+2. Delete road
+3. Open system
+0. Quit
+> 4
+incorrect option
+> 
+Menu:
+1. Add road
+2. Delete road
+3. Open system
+0. Quit
+> 5
+incorrect option
+> 
+Menu:
+1. Add road
+2. Delete road
+3. Open system
+0. Quit
+> 0
+Bye!
 ?[1;31m
 Start test 7?[0m
 ?[1;31m
