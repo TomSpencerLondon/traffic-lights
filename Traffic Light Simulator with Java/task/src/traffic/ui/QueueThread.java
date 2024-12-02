@@ -8,7 +8,6 @@ import static traffic.Main.clearConsole;
 public class QueueThread extends Thread {
     private boolean running = true;
     private boolean printEnabled = false;
-    boolean staticInfoPrinted = false;
     private int timeElapsed = 0;
     private final int maxRoads;
 

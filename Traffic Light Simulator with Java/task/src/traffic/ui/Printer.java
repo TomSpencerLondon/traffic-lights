@@ -25,11 +25,10 @@ public class Printer {
     public static void printSystemInfo(int numberOfRoads, int interval, QueueThread roadQueue) {
         System.out.println("! Number of roads: " + numberOfRoads + " !");
         System.out.println("! Interval: " + interval + " !");
-        if (!roadQueue.isEmpty()) {
-            for (String road : roadQueue.roads()) {
-                System.out.println("! " + road + " !");
-            }
-        }
+        roadQueue.roads()
+                .stream()
+                .map(road -> "! " + road + " !")
+                .forEach(System.out::println);
 
         System.out.println("! Press \"Enter\" to open menu !");
     }

@@ -17,14 +17,33 @@ public class Main {
 
         QueueThread queueThread = new QueueThread(numberOfRoads, interval);
         queueThread.start();
+        runTrafficManagementSystem(queueThread, scanner);
+    }
+
+    private static void runTrafficManagementSystem(QueueThread queueThread, Scanner scanner) {
         ApplicationState state = ApplicationState.MAIN_MENU;
+
         while (state != ApplicationState.EXIT) {
-            printFor(state, scanner::nextLine);
-            state = menuChoice(queueThread, scanner);
+            handle(state, scanner::nextLine);
+            state = processMenuChoice(queueThread, scanner);
         }
     }
 
-    private static ApplicationState menuChoice(QueueThread queueThread, Scanner scanner) {
+    private static void handle(ApplicationState state, ScannerCommand scannerCommand) {
+        clearConsole();
+        if (state == ApplicationState.MAIN_MENU) {
+            waitForEnter(scannerCommand);
+            Printer.printMenu();
+        } else if (state == ApplicationState.SYSTEM_INFO) {
+            Printer.printMenu();
+        }
+    }
+
+    private static void waitForEnter(ScannerCommand scannerCommand) {
+        scannerCommand.handle();
+    }
+
+    private static ApplicationState processMenuChoice(QueueThread queueThread, Scanner scanner) {
         try {
             int choice = getValidMenuChoice(scanner);
             return ApplicationState.getApplicationState(
@@ -38,17 +57,6 @@ public class Main {
         }
     }
 
-    private static void printFor(ApplicationState state, ScannerCommand scannerCommand) {
-        if (state == ApplicationState.MAIN_MENU) {
-            clearConsole();
-            scannerCommand.handle();
-            Printer.printMenu();
-        } else if (state == ApplicationState.SYSTEM_INFO) {
-            clearConsole();
-            Printer.printMenu();
-        }
-    }
-
 
     public static void clearConsole() {
         try {
@@ -56,7 +64,7 @@ public class Main {
                     ? new ProcessBuilder("cmd", "/c", "cls")
                     : new ProcessBuilder("clear");
             clearCommand.inheritIO().start().waitFor();
-        } catch (IOException | InterruptedException e) {
+        } catch (IOException | InterruptedException ignored) {
         }
     }
 
@@ -78,12 +86,16 @@ public class Main {
         String input = scanner.nextLine();
         try {
             int choice = Integer.parseInt(input);
-            if (choice >= 0 && choice <= 3) {
+            if (isInTheMenu(choice)) {
                 return choice;
             }
         } catch (NumberFormatException e) {
-            // Input was not a valid integer
+
         }
-        throw new InvalidChoiceException("incorrect option"); // Throw exception for invalid input
+        throw new InvalidChoiceException("incorrect option");
+    }
+
+    private static boolean isInTheMenu(int choice) {
+        return choice >= 0 && choice <= 3;
     }
 }
