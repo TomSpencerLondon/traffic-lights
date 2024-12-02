@@ -1,13 +1,12 @@
 package traffic;
 
-import traffic.ui.InvalidChoiceException;
-import traffic.ui.Printer;
+import traffic.ui.*;
 
 import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         Scanner scanner = new Scanner(System.in);
 
         Printer.printWelcomeMessage();
@@ -16,38 +15,48 @@ public class Main {
 
         int interval = getPositiveIntegerInput(scanner, "Input the interval: ");
 
-        while (true) {
-            clearConsole();
-            waitForEnter(scanner);
-            Printer.printMenu();
-
-            try {
-                int choice = getValidMenuChoice(scanner);
-                switch (choice) {
-                    case 1 -> Printer.printStubMessage("add");
-                    case 2 -> Printer.printStubMessage("delete");
-                    case 3 -> Printer.printStubMessage("system");
-                    case 0 -> {
-                        Printer.printGoodbyeMessage();
-                        scanner.close();
-                        return;
-                    }
-                }
-            } catch (InvalidChoiceException e) {
-                Printer.printStubMessage("incorrect option");
-            }
-
+        QueueThread queueThread = new QueueThread(numberOfRoads, interval);
+        queueThread.start();
+        ApplicationState state = ApplicationState.MAIN_MENU;
+        while (state != ApplicationState.EXIT) {
+            printFor(state, scanner::nextLine);
+            state = menuChoice(queueThread, scanner);
         }
     }
 
-    private static void clearConsole() {
+    private static ApplicationState menuChoice(QueueThread queueThread, Scanner scanner) {
+        try {
+            int choice = getValidMenuChoice(scanner);
+            return ApplicationState.getApplicationState(
+                    choice,
+                    queueThread,
+                    scanner::nextLine,
+                    scanner::close);
+        } catch (InvalidChoiceException e) {
+            Printer.printStubMessage("incorrect option");
+            return ApplicationState.MAIN_MENU;
+        }
+    }
+
+    private static void printFor(ApplicationState state, InputHandler inputHandler) {
+        if (state == ApplicationState.MAIN_MENU) {
+            clearConsole();
+            inputHandler.handle();
+            Printer.printMenu();
+        } else if (state == ApplicationState.SYSTEM_INFO) {
+            clearConsole();
+            Printer.printMenu();
+        }
+    }
+
+
+    public static void clearConsole() {
         try {
             var clearCommand = System.getProperty("os.name").contains("Windows")
                     ? new ProcessBuilder("cmd", "/c", "cls")
                     : new ProcessBuilder("clear");
             clearCommand.inheritIO().start().waitFor();
         } catch (IOException | InterruptedException e) {
-            // Handle exception (if any) silently
         }
     }
 
@@ -61,7 +70,7 @@ public class Main {
                 }
             }
             System.out.print("Incorrect input. Try again: ");
-            scanner.nextLine(); // Clear invalid input
+            scanner.nextLine();
         }
     }
 
@@ -79,7 +88,7 @@ public class Main {
     }
 
 
-    private static void waitForEnter(Scanner scanner) {
+    public static void waitForEnter(Scanner scanner) {
         scanner.nextLine();
     }
 }
