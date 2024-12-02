@@ -1,0 +1,26 @@
+type: edu
+files:
+  - name: src/traffic/Main.java
+    visible: true
+    learner_created: false
+  - name: test/GlobalTests.java
+    visible: false
+    learner_created: false
+  - name: test/SystemOutput.java
+    visible: false
+    learner_created: false
+  - name: test/TrafficLightTest.java
+    visible: false
+    learner_created: false
+  - name: src/traffic/Printer.java
+    visible: true
+    learner_created: true
+  - name: src/traffic/MenuHandler.java
+    visible: true
+    learner_created: true
+feedback_link: https://hyperskill.org/projects/288/stages/1501/implement#comment
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Mon, 02 Dec 2024 09:15:29 UTC"
+record: -1

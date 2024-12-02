@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TrafficLightTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-12-02T09:15:29" hostname="M-NCDP2JJ7C9" time="0.01">
+  <properties/>
+  <testcase name="start" classname="TrafficLightTest" time="0.01"/>
+  <system-out><![CDATA[?[1;31m
+Start test 1 (19)?[0m
+Welcome to the traffic management system!
+Input the number of roads: > 5
+Input the interval: > 3
+Menu:
+1. Add
+2. Delete
+3. System
+0. Quit
+> 1
+Road added
+Menu:
+1. Add
+2. Delete
+3. System
+0. Quit
+> 2
+Road deleted
+Menu:
+1. Add
+2. Delete
+3. System
+0. Quit
+> 3
+System opened
+Menu:
+1. Add
+2. Delete
+3. System
+0. Quit
+> 0
+Bye!
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
