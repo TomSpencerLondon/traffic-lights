@@ -22,13 +22,31 @@ public class Printer {
         System.out.println("Bye!");
     }
 
-    public static void printSystemStaticInfo(int numberOfRoads, int interval) {
+    public static void printSystemInfo(int numberOfRoads, int interval, QueueThread roadQueue) {
         System.out.println("! Number of roads: " + numberOfRoads + " !");
         System.out.println("! Interval: " + interval + " !");
+        if (!roadQueue.isEmpty()) {
+            for (String road : roadQueue.roads()) {
+                System.out.println("! " + road + " !");
+            }
+        }
+
         System.out.println("! Press \"Enter\" to open menu !");
     }
 
-    public static void printTimeElapsed(int timeElapsed) {
-        System.out.print(timeElapsed);
+    public static void printQueueFull() {
+        System.out.println("queue is full");
+    }
+
+    public static void printAdd(String roadName) {
+        System.out.println("add " + roadName);
+    }
+
+    public static void printQueueIsEmpty() {
+        System.out.println("queue is empty");
+    }
+
+    public static void printDeleted(String removedRoad) {
+        System.out.println("delete " + removedRoad);
     }
 }

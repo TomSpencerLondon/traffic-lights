@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
         Printer.printWelcomeMessage();
@@ -38,10 +38,10 @@ public class Main {
         }
     }
 
-    private static void printFor(ApplicationState state, InputHandler inputHandler) {
+    private static void printFor(ApplicationState state, ScannerCommand scannerCommand) {
         if (state == ApplicationState.MAIN_MENU) {
             clearConsole();
-            inputHandler.handle();
+            scannerCommand.handle();
             Printer.printMenu();
         } else if (state == ApplicationState.SYSTEM_INFO) {
             clearConsole();
@@ -75,20 +75,15 @@ public class Main {
     }
 
     private static int getValidMenuChoice(Scanner scanner) throws InvalidChoiceException {
-        String input = scanner.nextLine(); // Read the entire input as a string
+        String input = scanner.nextLine();
         try {
-            int choice = Integer.parseInt(input); // Attempt to parse input as an integer
+            int choice = Integer.parseInt(input);
             if (choice >= 0 && choice <= 3) {
-                return choice; // Return valid menu choice
+                return choice;
             }
         } catch (NumberFormatException e) {
             // Input was not a valid integer
         }
         throw new InvalidChoiceException("incorrect option"); // Throw exception for invalid input
-    }
-
-
-    public static void waitForEnter(Scanner scanner) {
-        scanner.nextLine();
     }
 }

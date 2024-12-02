@@ -1,5 +1,8 @@
 package traffic.ui;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 import static traffic.Main.clearConsole;
 
 public class QueueThread extends Thread {
@@ -7,12 +10,15 @@ public class QueueThread extends Thread {
     private boolean printEnabled = false;
     boolean staticInfoPrinted = false;
     private int timeElapsed = 0;
-    private final int numberOfRoads;
+    private final int maxRoads;
+
+    private final Queue<String> roadQueue;
     private final int interval;
 
-    public QueueThread(int numberOfRoads, int interval) {
-        this.numberOfRoads = numberOfRoads;
+    public QueueThread(int maxRoads, int interval) {
+        this.maxRoads = maxRoads;
         this.interval = interval;
+        this.roadQueue = new LinkedList<>();
         setName("QueueThread");
     }
 
@@ -26,7 +32,7 @@ public class QueueThread extends Thread {
                 if (printEnabled) {
                     clearConsole();
                     System.out.println("! " + timeElapsed + "s. have passed since system startup !");
-                    Printer.printSystemStaticInfo(numberOfRoads, interval);
+                    Printer.printSystemInfo(maxRoads, interval, this);
                 }
             } catch (InterruptedException e) {
                 running = false;
@@ -34,6 +40,31 @@ public class QueueThread extends Thread {
         }
     }
 
+    public synchronized void addRoad(String roadName) {
+        if (queueIsFull()) {
+            Printer.printQueueFull();
+        } else {
+            roadQueue.add(roadName);
+            Printer.printAdd(roadName);
+        }
+    }
+
+    public synchronized void deleteRoad() {
+        if (roadQueue.isEmpty()) {
+            Printer.printQueueIsEmpty();
+        } else {
+            String removedRoad = roadQueue.poll();
+            Printer.printDeleted(removedRoad);
+        }
+    }
+
+    private boolean queueIsFull() {
+        return roadQueue.size() >= maxRoads;
+    }
+
+    public void stopThread() {
+        interrupt();
+    }
 
     public synchronized void enablePrinting() {
         printEnabled = true;
@@ -43,8 +74,12 @@ public class QueueThread extends Thread {
         printEnabled = false;
     }
 
-    public void stopThread() {
-        interrupt();
+    public boolean isEmpty() {
+        return roadQueue.isEmpty();
+    }
+
+    public Queue<String> roads() {
+        return roadQueue;
     }
 }
 

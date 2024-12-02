@@ -18,45 +18,18 @@ files:
   - name: src/traffic/ui/QueueThread.java
     visible: true
     learner_created: true
+  - name: src/traffic/ui/ScannerCommand.java
+    visible: true
+    learner_created: true
+  - name: src/traffic/ui/ApplicationState.java
+    visible: true
+    learner_created: true
+  - name: src/traffic/ui/ScannerInput.java
+    visible: true
+    learner_created: true
 feedback_link: https://hyperskill.org/projects/288/stages/1504/implement#comment
-status: Failed
+status: Solved
 feedback:
-  message: |-
-    Wrong answer in test #7
-
-    Incorrect menu output in the following case: Pressed &quot;Enter&quot; to return from system mode. It should contain exactly 5 lines but there were 1 instead
-
-    Please find below the output of your program during this failed test.
-    Note that the &#39;&gt;&#39; character indicates the beginning of the input line.
-
-    ---
-
-    Welcome to the traffic management system!
-    Input the number of roads: &gt; 1
-    Input the interval: &gt; 1
-    Menu:
-    1. Add road
-    2. Delete road
-    3. Open system
-    0. Quit
-    &gt; 3
-    Switching to System state...
-    ! 1s. have passed since system startup !
-    ! Number of roads: 1 !
-    ! Interval: 1 !
-    ! Press &quot;Enter&quot; to open menu !
-    ! 2s. have passed since system startup !
-    ! Number of roads: 1 !
-    ! Interval: 1 !
-    ! Press &quot;Enter&quot; to open menu !
-    ! 3s. have passed since system startup !
-    ! Number of roads: 1 !
-    ! Interval: 1 !
-    ! Press &quot;Enter&quot; to open menu !
-    ! 4s. have passed since system startup !
-    ! Number of roads: 1 !
-    ! Interval: 1 !
-    ! Press &quot;Enter&quot; to open menu !
-    &gt;
-  time: "Mon, 02 Dec 2024 14:22:37 UTC"
+  message: Congratulations!
+  time: "Mon, 02 Dec 2024 18:17:35 UTC"
 record: 5

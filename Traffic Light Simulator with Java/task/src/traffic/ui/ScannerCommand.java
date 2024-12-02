@@ -1,7 +1,7 @@
 package traffic.ui;
 
 @FunctionalInterface
-public interface InputHandler {
+public interface ScannerCommand {
     void handle();
 }
 
