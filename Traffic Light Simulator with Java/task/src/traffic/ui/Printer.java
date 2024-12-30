@@ -1,5 +1,9 @@
 package traffic.ui;
 
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.stream.Collectors;
+
 public class Printer {
     public static void printWelcomeMessage() {
         System.out.println("Welcome to the traffic management system!");
@@ -22,13 +26,16 @@ public class Printer {
         System.out.println("Bye!");
     }
 
-    public static void printSystemInfo(int numberOfRoads, int interval, QueueThread roadQueue) {
-        System.out.println("! Number of roads: " + numberOfRoads + " !");
+    public static void printSystemInfo(int maxRoads, Queue<Road> roads, int interval) {
+        LinkedList<Road> printable = new LinkedList<>(roads);
+        System.out.println("! Number of roads: " + maxRoads + " !");
         System.out.println("! Interval: " + interval + " !");
-        roadQueue.roads()
-                .stream()
-                .map(road -> "! " + road + " !")
-                .forEach(System.out::println);
+
+        while(printable.peek() != null) {
+            Road road = printable.poll();
+            String state = road.isOpen() ? "\u001B[32mopen\u001B[0m" : "\u001B[31mclosed\u001B[0m";
+            System.out.printf("Road \"%s\" is %s for %ds.\n", road.getName(), state, road.getTimeRemaining());
+        }
 
         System.out.println("! Press \"Enter\" to open menu !");
     }

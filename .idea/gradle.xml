@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
@@ -17,6 +18,13 @@
             <option value="$PROJECT_DIR$/Traffic Light Simulator with Java/task/build/reports/tests" />
             <option value="$PROJECT_DIR$/Traffic Light Simulator with Java/task/build/test-results" />
             <option value="$PROJECT_DIR$/Traffic Light Simulator with Java/task/build/tmp" />
+            <option value="$PROJECT_DIR$/Traffic Light Simulator with Java/task/node_modules/@ai-sdk/provider-utils" />
+            <option value="$PROJECT_DIR$/Traffic Light Simulator with Java/task/node_modules/@ai-sdk/ui-utils" />
+            <option value="$PROJECT_DIR$/Traffic Light Simulator with Java/task/node_modules/@opentelemetry/api/build" />
+            <option value="$PROJECT_DIR$/Traffic Light Simulator with Java/task/node_modules/ai" />
+            <option value="$PROJECT_DIR$/Traffic Light Simulator with Java/task/node_modules/eventsource-parser" />
+            <option value="$PROJECT_DIR$/Traffic Light Simulator with Java/task/node_modules/ollama" />
+            <option value="$PROJECT_DIR$/Traffic Light Simulator with Java/task/node_modules/secure-json-parse" />
             <option value="$PROJECT_DIR$/util" />
           </set>
         </option>

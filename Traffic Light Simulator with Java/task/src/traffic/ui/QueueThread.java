@@ -11,7 +11,7 @@ public class QueueThread extends Thread {
     private int timeElapsed = 0;
     private final int maxRoads;
 
-    private final Queue<String> roadQueue;
+    private final Queue<Road> roadQueue;
     private final int interval;
 
     public QueueThread(int maxRoads, int interval) {
@@ -28,10 +28,33 @@ public class QueueThread extends Thread {
                 Thread.sleep(1000);
                 timeElapsed++;
 
+
+                synchronized (roadQueue) {
+                    for(Road road : roadQueue) {
+                        road.decrementTime();
+                    }
+                }
+
+                Road frontRoad = roadQueue.peek();
+
+                if (frontRoad != null && frontRoad.getTimeRemaining() <= 0) {
+                    roadQueue.poll();
+                    frontRoad.setOpen(false);
+                    frontRoad.setTimeRemaining(interval * roadQueue.size());
+                    roadQueue.add(frontRoad);
+
+                    Road nextRoad = roadQueue.peek();
+
+                    if (nextRoad != null) {
+                        nextRoad.setOpen(true);
+                        nextRoad.setTimeRemaining(interval);
+                    }
+                }
+
                 if (printEnabled) {
                     clearConsole();
                     System.out.println("! " + timeElapsed + "s. have passed since system startup !");
-                    Printer.printSystemInfo(maxRoads, interval, this);
+                    Printer.printSystemInfo(maxRoads, roads(), interval);
                 }
             } catch (InterruptedException e) {
                 running = false;
@@ -43,7 +66,13 @@ public class QueueThread extends Thread {
         if (queueIsFull()) {
             Printer.printQueueFull();
         } else {
-            roadQueue.add(roadName);
+            Road newRoad = new Road(roadName, interval);
+            roadQueue.add(newRoad);
+
+            if (roadQueue.size() == 1) {
+                newRoad.setOpen(true);
+            }
+
             Printer.printAdd(roadName);
         }
     }
@@ -52,8 +81,14 @@ public class QueueThread extends Thread {
         if (roadQueue.isEmpty()) {
             Printer.printQueueIsEmpty();
         } else {
-            String removedRoad = roadQueue.poll();
-            Printer.printDeleted(removedRoad);
+            Road removedRoad = roadQueue.poll();
+            Printer.printDeleted(removedRoad.getName());
+
+            if (!roadQueue.isEmpty()) {
+                Road nextRoad = roadQueue.peek();
+                nextRoad.setOpen(true);
+                nextRoad.setTimeRemaining(interval);
+            }
         }
     }
 
@@ -77,7 +112,7 @@ public class QueueThread extends Thread {
         return roadQueue.isEmpty();
     }
 
-    public Queue<String> roads() {
+    public Queue<Road> roads() {
         return roadQueue;
     }
 }
