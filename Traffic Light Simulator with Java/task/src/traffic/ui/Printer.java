@@ -1,7 +1,6 @@
 package traffic.ui;
 
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Printer {
@@ -26,26 +25,33 @@ public class Printer {
         System.out.println("Bye!");
     }
 
-    public static void printSystemInfo(int maxRoads, Queue<Road> roads, int interval) {
-        LinkedList<Road> printable = new LinkedList<>(roads);
-        System.out.println("! Number of roads: " + maxRoads + " !");
-        System.out.println("! Interval: " + interval + " !");
+    public static void printSystemInfo(int maxRoads, List<Road> roads, int interval, int elapsedTime) {
+        System.out.println(elapsedTime + "s have passed since system startup");
 
-        while(printable.peek() != null) {
-            Road road = printable.poll();
-            String state = road.isOpen() ? "\u001B[32mopen\u001B[0m" : "\u001B[31mclosed\u001B[0m";
-            System.out.printf("Road \"%s\" is %s for %ds.\n", road.getName(), state, road.getTimeRemaining());
+        // Print number of roads and interval
+        System.out.println("Number of roads: " + maxRoads);
+        System.out.println("Interval: " + interval);
+
+        // Print queue details
+        if (!roads.isEmpty()) {
+            // Convert to array and print in reverse order
+            Road[] roadArray = roads.toArray(new Road[0]);
+            for (int i = 0; i < roadArray.length; i++) {
+                System.out.println(roadArray[i].getName());
+            }
         }
 
-        System.out.println("! Press \"Enter\" to open menu !");
+        // Print prompt for menu
+        System.out.println("Press \"Enter\" to open menu");
     }
+
 
     public static void printQueueFull() {
         System.out.println("queue is full");
     }
 
     public static void printAdd(String roadName) {
-        System.out.println("add " + roadName);
+        System.out.println(roadName + " added!");
     }
 
     public static void printQueueIsEmpty() {
@@ -53,6 +59,6 @@ public class Printer {
     }
 
     public static void printDeleted(String removedRoad) {
-        System.out.println("delete " + removedRoad);
+        System.out.println(removedRoad + " deleted!");
     }
 }

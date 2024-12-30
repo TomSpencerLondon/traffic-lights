@@ -42,25 +42,34 @@ files:
 feedback_link: https://hyperskill.org/projects/288/stages/1505/implement#comment
 status: Failed
 feedback:
-  message: "Wrong answer in test #11\n\nWhen the user provided any changes to queue,\
-    \ output of system mode should change. There should be exactly 4+n non-empty lines,\
-    \ where n is the amount of elements in queue, in such order, just like in the\
-    \ example:\n1. Line, that shows amount of time since the start of the program\n\
-    2. Line, that shows max number of elements, provided by user\n3. Line, that shows\
-    \ interval, provided by user\n...\n*queue*\n...\nn+4. Line, that that asks user\
-    \ to press &#39;Enter&#39; to show options\n\nPlease find below the output of\
-    \ your program during this failed test.\nNote that the &#39;&gt;&#39; character\
-    \ indicates the beginning of the input line.\n\n---\n\nWelcome to the traffic\
-    \ management system!\nInput the number of roads: &gt; 1\nInput the interval: &gt;\
-    \ 1\nMenu:\n1. Add road\n2. Delete road\n3. Open system\n0. Quit\n&gt; 2\nqueue\
-    \ is empty\n&gt; \nMenu:\n1. Add road\n2. Delete road\n3. Open system\n0. Quit\n\
-    &gt; 3\n! 1s. have passed since system startup !\n! Number of roads: 1 !\n! Interval:\
-    \ 1 !\n\n! Press &quot;Enter&quot; to open menu !\n&gt; \nMenu:\n1. Add road\n\
-    2. Delete road\n3. Open system\n0. Quit\n&gt; 1\ninput: \n&gt; n3w_v3ry_unu5u4l_r04d_n4m3_1\n\
-    add n3w_v3ry_unu5u4l_r04d_n4m3_1\n&gt; \nMenu:\n1. Add road\n2. Delete road\n\
-    3. Open system\n0. Quit\n&gt; 3\n! 2s. have passed since system startup !\n! Number\
-    \ of roads: 1 !\n! Interval: 1 !\nRoads in queue (front to rear): n3w_v3ry_unu5u4l_r04d_n4m3_1\n\
-    Road &quot;n3w_v3ry_unu5u4l_r04d_n4m3_1&quot; is open for 1s.\n! Press &quot;Enter&quot;\
-    \ to open menu !"
-  time: "Mon, 30 Dec 2024 09:31:25 UTC"
+  message: "Wrong answer in test #12\n\nBetween settings lines and the line, that\
+    \ asks user to press Enter to show options, there should be printed all elements\
+    \ in queue from front to rear, containing elements&#39; names in such order.\n\
+    \nPlease find below the output of your program during this failed test.\nNote\
+    \ that the &#39;&gt;&#39; character indicates the beginning of the input line.\n\
+    \n---\n\nWelcome to the traffic management system!\nInput the number of roads:\
+    \ &gt; 2\nInput the interval: &gt; 2\nMenu:\n1. Add road\n2. Delete road\n3. Open\
+    \ system\n0. Quit\n&gt; 2\nqueue is empty\n&gt; \nMenu:\n1. Add road\n2. Delete\
+    \ road\n3. Open system\n0. Quit\n&gt; 3\n1s have passed since system startup\n\
+    Number of roads: 2\nInterval: 2\nPress &quot;Enter&quot; to open menu\n&gt; \n\
+    Menu:\n1. Add road\n2. Delete road\n3. Open system\n0. Quit\n&gt; 1\ninput: \n\
+    &gt; n3w_v3ry_unu5u4l_r04d_n4m3_1\nn3w_v3ry_unu5u4l_r04d_n4m3_1 added!\n&gt; \n\
+    Menu:\n1. Add road\n2. Delete road\n3. Open system\n0. Quit\n&gt; 3\n2s have passed\
+    \ since system startup\nNumber of roads: 2\nInterval: 2\nn3w_v3ry_unu5u4l_r04d_n4m3_1\n\
+    Press &quot;Enter&quot; to open menu\n&gt; \nMenu:\n1. Add road\n2. Delete road\n\
+    3. Open system\n0. Quit\n&gt; 1\ninput: \n&gt; n3w_v3ry_unu5u4l_r04d_n4m3_2\n\
+    n3w_v3ry_unu5u4l_r04d_n4m3_2 added!\n&gt; \nMenu:\n1. Add road\n2. Delete road\n\
+    3. Open system\n0. Quit\n&gt; 3\n3s have passed since system startup\nNumber of\
+    \ roads: 2\nInterval: 2\nn3w_v3ry_unu5u4l_r04d_n4m3_1\nn3w_v3ry_unu5u4l_r04d_n4m3_2\n\
+    Press &quot;Enter&quot; to open menu\n&gt; \nMenu:\n1. Add road\n2. Delete road\n\
+    3. Open system\n0. Quit\n&gt; 1\ninput: \n&gt; n3w_v3ry_unu5u4l_r04d_n4m3_3\n\
+    queue is full\n&gt; \nMenu:\n1. Add road\n2. Delete road\n3. Open system\n0. Quit\n\
+    &gt; 3\n4s have passed since system startup\nNumber of roads: 2\nInterval: 2\n\
+    n3w_v3ry_unu5u4l_r04d_n4m3_1\nn3w_v3ry_unu5u4l_r04d_n4m3_2\nPress &quot;Enter&quot;\
+    \ to open menu\n&gt; \nMenu:\n1. Add road\n2. Delete road\n3. Open system\n0.\
+    \ Quit\n&gt; 2\nn3w_v3ry_unu5u4l_r04d_n4m3_2 deleted!\n&gt; \nMenu:\n1. Add road\n\
+    2. Delete road\n3. Open system\n0. Quit\n&gt; 3\n5s have passed since system startup\n\
+    Number of roads: 2\nInterval: 2\nn3w_v3ry_unu5u4l_r04d_n4m3_1\nPress &quot;Enter&quot;\
+    \ to open menu"
+  time: "Mon, 30 Dec 2024 11:49:28 UTC"
 record: -1

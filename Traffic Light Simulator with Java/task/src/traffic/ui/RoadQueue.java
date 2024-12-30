@@ -26,6 +26,39 @@ public class RoadQueue {
         }
 
         rear = (rear + 1) % roads.length;
+        roads[rear] = roadName;
+        size++;
     }
 
+    public String remove() {
+        if (isEmpty()) {
+            throw new IllegalStateException("Queue is empty");
+        }
+        String removed = roads[front];
+        roads[front] = null;
+        front = (front + 1) % roads.length;
+        size--;
+
+        return removed;
+    }
+
+    public String peek() {
+        if (isEmpty()) {
+            return null;
+        }
+        return roads[front];
+    }
+
+    public int size() {
+        return size;
+    }
+
+    public synchronized String[] getNames() {
+        String[] result = new String[size];
+        // Fill array in normal order
+        for (int i = 0; i < size; i++) {
+            result[i] = roads[(front + i) % roads.length];
+        }
+        return result;
+    }
 }

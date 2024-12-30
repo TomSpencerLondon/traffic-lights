@@ -1,17 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="GlobalTests" tests="1" skipped="0" failures="1" errors="0" timestamp="2024-12-30T09:31:12" hostname="M-NCDP2JJ7C9" time="13.429">
+<testsuite name="GlobalTests" tests="1" skipped="0" failures="1" errors="0" timestamp="2024-12-30T11:49:06" hostname="M-NCDP2JJ7C9" time="21.874">
   <properties/>
-  <testcase name="start" classname="GlobalTests" time="13.429">
-    <failure message="java.lang.AssertionError: Wrong answer in test #11&#10;&#10;When the user provided any changes to queue, output of system mode should change. There should be exactly 4+n non-empty lines, where n is the amount of elements in queue, in such order, just like in the example:&#10;1. Line, that shows amount of time since the start of the program&#10;2. Line, that shows max number of elements, provided by user&#10;3. Line, that shows interval, provided by user&#10;...&#10;*queue*&#10;...&#10;n+4. Line, that that asks user to press 'Enter' to show options&#10;&#10;Please find below the output of your program during this failed test.&#10;Note that the '&gt;' character indicates the beginning of the input line.&#10;&#10;---&#10;&#10;Welcome to the traffic management system!&#10;Input the number of roads: &gt; 1&#10;Input the interval: &gt; 1&#10;Menu:&#10;1. Add road&#10;2. Delete road&#10;3. Open system&#10;0. Quit&#10;&gt; 2&#10;queue is empty&#10;&gt; &#10;Menu:&#10;1. Add road&#10;2. Delete road&#10;3. Open system&#10;0. Quit&#10;&gt; 3&#10;! 1s. have passed since system startup !&#10;! Number of roads: 1 !&#10;! Interval: 1 !&#10;&#10;! Press &quot;Enter&quot; to open menu !&#10;&gt; &#10;Menu:&#10;1. Add road&#10;2. Delete road&#10;3. Open system&#10;0. Quit&#10;&gt; 1&#10;input: &#10;&gt; n3w_v3ry_unu5u4l_r04d_n4m3_1&#10;add n3w_v3ry_unu5u4l_r04d_n4m3_1&#10;&gt; &#10;Menu:&#10;1. Add road&#10;2. Delete road&#10;3. Open system&#10;0. Quit&#10;&gt; 3&#10;! 2s. have passed since system startup !&#10;! Number of roads: 1 !&#10;! Interval: 1 !&#10;Roads in queue (front to rear): n3w_v3ry_unu5u4l_r04d_n4m3_1&#10;Road &quot;n3w_v3ry_unu5u4l_r04d_n4m3_1&quot; is ?[32mopen?[0m for 1s.&#10;! Press &quot;Enter&quot; to open menu !" type="java.lang.AssertionError">java.lang.AssertionError: Wrong answer in test #11
+  <testcase name="start" classname="GlobalTests" time="21.874">
+    <failure message="java.lang.AssertionError: Wrong answer in test #12&#10;&#10;Between settings lines and the line, that asks user to press Enter to show options, there should be printed all elements in queue from front to rear, containing elements' names in such order.&#10;&#10;Please find below the output of your program during this failed test.&#10;Note that the '&gt;' character indicates the beginning of the input line.&#10;&#10;---&#10;&#10;Welcome to the traffic management system!&#10;Input the number of roads: &gt; 2&#10;Input the interval: &gt; 2&#10;Menu:&#10;1. Add road&#10;2. Delete road&#10;3. Open system&#10;0. Quit&#10;&gt; 2&#10;queue is empty&#10;&gt; &#10;Menu:&#10;1. Add road&#10;2. Delete road&#10;3. Open system&#10;0. Quit&#10;&gt; 3&#10;1s have passed since system startup&#10;Number of roads: 2&#10;Interval: 2&#10;Press &quot;Enter&quot; to open menu&#10;&gt; &#10;Menu:&#10;1. Add road&#10;2. Delete road&#10;3. Open system&#10;0. Quit&#10;&gt; 1&#10;input: &#10;&gt; n3w_v3ry_unu5u4l_r04d_n4m3_1&#10;n3w_v3ry_unu5u4l_r04d_n4m3_1 added!&#10;&gt; &#10;Menu:&#10;1. Add road&#10;2. Delete road&#10;3. Open system&#10;0. Quit&#10;&gt; 3&#10;2s have passed since system startup&#10;Number of roads: 2&#10;Interval: 2&#10;n3w_v3ry_unu5u4l_r04d_n4m3_1&#10;Press &quot;Enter&quot; to open menu&#10;&gt; &#10;Menu:&#10;1. Add road&#10;2. Delete road&#10;3. Open system&#10;0. Quit&#10;&gt; 1&#10;input: &#10;&gt; n3w_v3ry_unu5u4l_r04d_n4m3_2&#10;n3w_v3ry_unu5u4l_r04d_n4m3_2 added!&#10;&gt; &#10;Menu:&#10;1. Add road&#10;2. Delete road&#10;3. Open system&#10;0. Quit&#10;&gt; 3&#10;3s have passed since system startup&#10;Number of roads: 2&#10;Interval: 2&#10;n3w_v3ry_unu5u4l_r04d_n4m3_1&#10;n3w_v3ry_unu5u4l_r04d_n4m3_2&#10;Press &quot;Enter&quot; to open menu&#10;&gt; &#10;Menu:&#10;1. Add road&#10;2. Delete road&#10;3. Open system&#10;0. Quit&#10;&gt; 1&#10;input: &#10;&gt; n3w_v3ry_unu5u4l_r04d_n4m3_3&#10;queue is full&#10;&gt; &#10;Menu:&#10;1. Add road&#10;2. Delete road&#10;3. Open system&#10;0. Quit&#10;&gt; 3&#10;4s have passed since system startup&#10;Number of roads: 2&#10;Interval: 2&#10;n3w_v3ry_unu5u4l_r04d_n4m3_1&#10;n3w_v3ry_unu5u4l_r04d_n4m3_2&#10;Press &quot;Enter&quot; to open menu&#10;&gt; &#10;Menu:&#10;1. Add road&#10;2. Delete road&#10;3. Open system&#10;0. Quit&#10;&gt; 2&#10;n3w_v3ry_unu5u4l_r04d_n4m3_2 deleted!&#10;&gt; &#10;Menu:&#10;1. Add road&#10;2. Delete road&#10;3. Open system&#10;0. Quit&#10;&gt; 3&#10;5s have passed since system startup&#10;Number of roads: 2&#10;Interval: 2&#10;n3w_v3ry_unu5u4l_r04d_n4m3_1&#10;Press &quot;Enter&quot; to open menu" type="java.lang.AssertionError">java.lang.AssertionError: Wrong answer in test #12
 
-When the user provided any changes to queue, output of system mode should change. There should be exactly 4+n non-empty lines, where n is the amount of elements in queue, in such order, just like in the example:
-1. Line, that shows amount of time since the start of the program
-2. Line, that shows max number of elements, provided by user
-3. Line, that shows interval, provided by user
-...
-*queue*
-...
-n+4. Line, that that asks user to press 'Enter' to show options
+Between settings lines and the line, that asks user to press Enter to show options, there should be printed all elements in queue from front to rear, containing elements' names in such order.
 
 Please find below the output of your program during this failed test.
 Note that the '&gt;' character indicates the beginning of the input line.
@@ -19,8 +12,8 @@ Note that the '&gt;' character indicates the beginning of the input line.
 ---
 
 Welcome to the traffic management system!
-Input the number of roads: &gt; 1
-Input the interval: &gt; 1
+Input the number of roads: &gt; 2
+Input the interval: &gt; 2
 Menu:
 1. Add road
 2. Delete road
@@ -35,11 +28,10 @@ Menu:
 3. Open system
 0. Quit
 &gt; 3
-! 1s. have passed since system startup !
-! Number of roads: 1 !
-! Interval: 1 !
-
-! Press &quot;Enter&quot; to open menu !
+1s have passed since system startup
+Number of roads: 2
+Interval: 2
+Press &quot;Enter&quot; to open menu
 &gt; 
 Menu:
 1. Add road
@@ -49,7 +41,7 @@ Menu:
 &gt; 1
 input: 
 &gt; n3w_v3ry_unu5u4l_r04d_n4m3_1
-add n3w_v3ry_unu5u4l_r04d_n4m3_1
+n3w_v3ry_unu5u4l_r04d_n4m3_1 added!
 &gt; 
 Menu:
 1. Add road
@@ -57,12 +49,77 @@ Menu:
 3. Open system
 0. Quit
 &gt; 3
-! 2s. have passed since system startup !
-! Number of roads: 1 !
-! Interval: 1 !
-Roads in queue (front to rear): n3w_v3ry_unu5u4l_r04d_n4m3_1
-Road &quot;n3w_v3ry_unu5u4l_r04d_n4m3_1&quot; is ?[32mopen?[0m for 1s.
-! Press &quot;Enter&quot; to open menu !
+2s have passed since system startup
+Number of roads: 2
+Interval: 2
+n3w_v3ry_unu5u4l_r04d_n4m3_1
+Press &quot;Enter&quot; to open menu
+&gt; 
+Menu:
+1. Add road
+2. Delete road
+3. Open system
+0. Quit
+&gt; 1
+input: 
+&gt; n3w_v3ry_unu5u4l_r04d_n4m3_2
+n3w_v3ry_unu5u4l_r04d_n4m3_2 added!
+&gt; 
+Menu:
+1. Add road
+2. Delete road
+3. Open system
+0. Quit
+&gt; 3
+3s have passed since system startup
+Number of roads: 2
+Interval: 2
+n3w_v3ry_unu5u4l_r04d_n4m3_1
+n3w_v3ry_unu5u4l_r04d_n4m3_2
+Press &quot;Enter&quot; to open menu
+&gt; 
+Menu:
+1. Add road
+2. Delete road
+3. Open system
+0. Quit
+&gt; 1
+input: 
+&gt; n3w_v3ry_unu5u4l_r04d_n4m3_3
+queue is full
+&gt; 
+Menu:
+1. Add road
+2. Delete road
+3. Open system
+0. Quit
+&gt; 3
+4s have passed since system startup
+Number of roads: 2
+Interval: 2
+n3w_v3ry_unu5u4l_r04d_n4m3_1
+n3w_v3ry_unu5u4l_r04d_n4m3_2
+Press &quot;Enter&quot; to open menu
+&gt; 
+Menu:
+1. Add road
+2. Delete road
+3. Open system
+0. Quit
+&gt; 2
+n3w_v3ry_unu5u4l_r04d_n4m3_2 deleted!
+&gt; 
+Menu:
+1. Add road
+2. Delete road
+3. Open system
+0. Quit
+&gt; 3
+5s have passed since system startup
+Number of roads: 2
+Interval: 2
+n3w_v3ry_unu5u4l_r04d_n4m3_1
+Press &quot;Enter&quot; to open menu
 	at org.junit.Assert.fail(Assert.java:89)
 	at org.hyperskill.hstest.stage.StageTest.start(StageTest.java:208)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -221,26 +278,22 @@ Menu:
 3. Open system
 0. Quit
 > 3
-! 1s. have passed since system startup !
-! Number of roads: 1 !
-! Interval: 1 !
-
-! Press "Enter" to open menu !
-! 2s. have passed since system startup !
-! Number of roads: 1 !
-! Interval: 1 !
-
-! Press "Enter" to open menu !
-! 3s. have passed since system startup !
-! Number of roads: 1 !
-! Interval: 1 !
-
-! Press "Enter" to open menu !
-! 4s. have passed since system startup !
-! Number of roads: 1 !
-! Interval: 1 !
-
-! Press "Enter" to open menu !
+1s have passed since system startup
+Number of roads: 1
+Interval: 1
+Press "Enter" to open menu
+2s have passed since system startup
+Number of roads: 1
+Interval: 1
+Press "Enter" to open menu
+3s have passed since system startup
+Number of roads: 1
+Interval: 1
+Press "Enter" to open menu
+4s have passed since system startup
+Number of roads: 1
+Interval: 1
+Press "Enter" to open menu
 > 
 Menu:
 1. Add road
@@ -248,11 +301,10 @@ Menu:
 3. Open system
 0. Quit
 > 3
-! 5s. have passed since system startup !
-! Number of roads: 1 !
-! Interval: 1 !
-
-! Press "Enter" to open menu !
+5s have passed since system startup
+Number of roads: 1
+Interval: 1
+Press "Enter" to open menu
 > 
 Menu:
 1. Add road
@@ -272,26 +324,22 @@ Menu:
 3. Open system
 0. Quit
 > 3
-! 1s. have passed since system startup !
-! Number of roads: 24367587 !
-! Interval: 24367587 !
-
-! Press "Enter" to open menu !
-! 2s. have passed since system startup !
-! Number of roads: 24367587 !
-! Interval: 24367587 !
-
-! Press "Enter" to open menu !
-! 3s. have passed since system startup !
-! Number of roads: 24367587 !
-! Interval: 24367587 !
-
-! Press "Enter" to open menu !
-! 4s. have passed since system startup !
-! Number of roads: 24367587 !
-! Interval: 24367587 !
-
-! Press "Enter" to open menu !
+1s have passed since system startup
+Number of roads: 24367587
+Interval: 24367587
+Press "Enter" to open menu
+2s have passed since system startup
+Number of roads: 24367587
+Interval: 24367587
+Press "Enter" to open menu
+3s have passed since system startup
+Number of roads: 24367587
+Interval: 24367587
+Press "Enter" to open menu
+4s have passed since system startup
+Number of roads: 24367587
+Interval: 24367587
+Press "Enter" to open menu
 > 
 Menu:
 1. Add road
@@ -299,11 +347,10 @@ Menu:
 3. Open system
 0. Quit
 > 3
-! 5s. have passed since system startup !
-! Number of roads: 24367587 !
-! Interval: 24367587 !
-
-! Press "Enter" to open menu !
+5s have passed since system startup
+Number of roads: 24367587
+Interval: 24367587
+Press "Enter" to open menu
 > 
 Menu:
 1. Add road
@@ -333,7 +380,7 @@ Menu:
 > 1
 input: 
 > n3w_v3ry_unu5u4l_r04d_n4m3_1
-add n3w_v3ry_unu5u4l_r04d_n4m3_1
+n3w_v3ry_unu5u4l_r04d_n4m3_1 added!
 > 
 Menu:
 1. Add road
@@ -351,7 +398,7 @@ Menu:
 3. Open system
 0. Quit
 > 2
-delete n3w_v3ry_unu5u4l_r04d_n4m3_1
+n3w_v3ry_unu5u4l_r04d_n4m3_1 deleted!
 > 
 Menu:
 1. Add road
@@ -361,7 +408,7 @@ Menu:
 > 1
 input: 
 > n3w_v3ry_unu5u4l_r04d_n4m3_4
-add n3w_v3ry_unu5u4l_r04d_n4m3_4
+n3w_v3ry_unu5u4l_r04d_n4m3_4 added!
 > 
 Menu:
 1. Add road
@@ -391,7 +438,7 @@ Menu:
 > 1
 input: 
 > n3w_v3ry_unu5u4l_r04d_n4m3_1
-add n3w_v3ry_unu5u4l_r04d_n4m3_1
+n3w_v3ry_unu5u4l_r04d_n4m3_1 added!
 > 
 Menu:
 1. Add road
@@ -401,7 +448,7 @@ Menu:
 > 1
 input: 
 > n3w_v3ry_unu5u4l_r04d_n4m3_2
-add n3w_v3ry_unu5u4l_r04d_n4m3_2
+n3w_v3ry_unu5u4l_r04d_n4m3_2 added!
 > 
 Menu:
 1. Add road
@@ -419,7 +466,7 @@ Menu:
 3. Open system
 0. Quit
 > 2
-delete n3w_v3ry_unu5u4l_r04d_n4m3_1
+n3w_v3ry_unu5u4l_r04d_n4m3_1 deleted!
 > 
 Menu:
 1. Add road
@@ -427,7 +474,7 @@ Menu:
 3. Open system
 0. Quit
 > 2
-delete n3w_v3ry_unu5u4l_r04d_n4m3_2
+n3w_v3ry_unu5u4l_r04d_n4m3_2 deleted!
 > 
 Menu:
 1. Add road
@@ -445,7 +492,7 @@ Menu:
 > 1
 input: 
 > n3w_v3ry_unu5u4l_r04d_n4m3_7
-add n3w_v3ry_unu5u4l_r04d_n4m3_7
+n3w_v3ry_unu5u4l_r04d_n4m3_7 added!
 > 
 Menu:
 1. Add road
@@ -473,11 +520,10 @@ Menu:
 3. Open system
 0. Quit
 > 3
-! 1s. have passed since system startup !
-! Number of roads: 1 !
-! Interval: 1 !
-
-! Press "Enter" to open menu !
+1s have passed since system startup
+Number of roads: 1
+Interval: 1
+Press "Enter" to open menu
 > 
 Menu:
 1. Add road
@@ -487,7 +533,7 @@ Menu:
 > 1
 input: 
 > n3w_v3ry_unu5u4l_r04d_n4m3_1
-add n3w_v3ry_unu5u4l_r04d_n4m3_1
+n3w_v3ry_unu5u4l_r04d_n4m3_1 added!
 > 
 Menu:
 1. Add road
@@ -495,12 +541,193 @@ Menu:
 3. Open system
 0. Quit
 > 3
-! 2s. have passed since system startup !
-! Number of roads: 1 !
-! Interval: 1 !
-Roads in queue (front to rear): n3w_v3ry_unu5u4l_r04d_n4m3_1
-Road "n3w_v3ry_unu5u4l_r04d_n4m3_1" is ?[32mopen?[0m for 1s.
-! Press "Enter" to open menu !
+2s have passed since system startup
+Number of roads: 1
+Interval: 1
+n3w_v3ry_unu5u4l_r04d_n4m3_1
+Press "Enter" to open menu
+> 
+Menu:
+1. Add road
+2. Delete road
+3. Open system
+0. Quit
+> 1
+input: 
+> n3w_v3ry_unu5u4l_r04d_n4m3_2
+queue is full
+> 
+Menu:
+1. Add road
+2. Delete road
+3. Open system
+0. Quit
+> 3
+3s have passed since system startup
+Number of roads: 1
+Interval: 1
+n3w_v3ry_unu5u4l_r04d_n4m3_1
+Press "Enter" to open menu
+> 
+Menu:
+1. Add road
+2. Delete road
+3. Open system
+0. Quit
+> 2
+n3w_v3ry_unu5u4l_r04d_n4m3_1 deleted!
+> 
+Menu:
+1. Add road
+2. Delete road
+3. Open system
+0. Quit
+> 3
+4s have passed since system startup
+Number of roads: 1
+Interval: 1
+Press "Enter" to open menu
+> 
+Menu:
+1. Add road
+2. Delete road
+3. Open system
+0. Quit
+> 1
+input: 
+> n3w_v3ry_unu5u4l_r04d_n4m3_4
+n3w_v3ry_unu5u4l_r04d_n4m3_4 added!
+> 
+Menu:
+1. Add road
+2. Delete road
+3. Open system
+0. Quit
+> 3
+5s have passed since system startup
+Number of roads: 1
+Interval: 1
+n3w_v3ry_unu5u4l_r04d_n4m3_4
+Press "Enter" to open menu
+> 
+Menu:
+1. Add road
+2. Delete road
+3. Open system
+0. Quit
+> 0
+Bye!
+?[1;31m
+Start test 12?[0m
+Welcome to the traffic management system!
+Input the number of roads: > 2
+Input the interval: > 2
+Menu:
+1. Add road
+2. Delete road
+3. Open system
+0. Quit
+> 2
+queue is empty
+> 
+Menu:
+1. Add road
+2. Delete road
+3. Open system
+0. Quit
+> 3
+1s have passed since system startup
+Number of roads: 2
+Interval: 2
+Press "Enter" to open menu
+> 
+Menu:
+1. Add road
+2. Delete road
+3. Open system
+0. Quit
+> 1
+input: 
+> n3w_v3ry_unu5u4l_r04d_n4m3_1
+n3w_v3ry_unu5u4l_r04d_n4m3_1 added!
+> 
+Menu:
+1. Add road
+2. Delete road
+3. Open system
+0. Quit
+> 3
+2s have passed since system startup
+Number of roads: 2
+Interval: 2
+n3w_v3ry_unu5u4l_r04d_n4m3_1
+Press "Enter" to open menu
+> 
+Menu:
+1. Add road
+2. Delete road
+3. Open system
+0. Quit
+> 1
+input: 
+> n3w_v3ry_unu5u4l_r04d_n4m3_2
+n3w_v3ry_unu5u4l_r04d_n4m3_2 added!
+> 
+Menu:
+1. Add road
+2. Delete road
+3. Open system
+0. Quit
+> 3
+3s have passed since system startup
+Number of roads: 2
+Interval: 2
+n3w_v3ry_unu5u4l_r04d_n4m3_1
+n3w_v3ry_unu5u4l_r04d_n4m3_2
+Press "Enter" to open menu
+> 
+Menu:
+1. Add road
+2. Delete road
+3. Open system
+0. Quit
+> 1
+input: 
+> n3w_v3ry_unu5u4l_r04d_n4m3_3
+queue is full
+> 
+Menu:
+1. Add road
+2. Delete road
+3. Open system
+0. Quit
+> 3
+4s have passed since system startup
+Number of roads: 2
+Interval: 2
+n3w_v3ry_unu5u4l_r04d_n4m3_1
+n3w_v3ry_unu5u4l_r04d_n4m3_2
+Press "Enter" to open menu
+> 
+Menu:
+1. Add road
+2. Delete road
+3. Open system
+0. Quit
+> 2
+n3w_v3ry_unu5u4l_r04d_n4m3_2 deleted!
+> 
+Menu:
+1. Add road
+2. Delete road
+3. Open system
+0. Quit
+> 3
+5s have passed since system startup
+Number of roads: 2
+Interval: 2
+n3w_v3ry_unu5u4l_r04d_n4m3_1
+Press "Enter" to open menu
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
