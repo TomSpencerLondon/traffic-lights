@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="GlobalTests" tests="1" skipped="0" failures="1" errors="0" timestamp="2024-12-30T11:49:06" hostname="M-NCDP2JJ7C9" time="21.874">
+<testsuite name="GlobalTests" tests="1" skipped="0" failures="1" errors="0" timestamp="2024-12-30T12:02:24" hostname="M-NCDP2JJ7C9" time="22.343">
   <properties/>
-  <testcase name="start" classname="GlobalTests" time="21.874">
+  <testcase name="start" classname="GlobalTests" time="22.343">
     <failure message="java.lang.AssertionError: Wrong answer in test #12&#10;&#10;Between settings lines and the line, that asks user to press Enter to show options, there should be printed all elements in queue from front to rear, containing elements' names in such order.&#10;&#10;Please find below the output of your program during this failed test.&#10;Note that the '&gt;' character indicates the beginning of the input line.&#10;&#10;---&#10;&#10;Welcome to the traffic management system!&#10;Input the number of roads: &gt; 2&#10;Input the interval: &gt; 2&#10;Menu:&#10;1. Add road&#10;2. Delete road&#10;3. Open system&#10;0. Quit&#10;&gt; 2&#10;queue is empty&#10;&gt; &#10;Menu:&#10;1. Add road&#10;2. Delete road&#10;3. Open system&#10;0. Quit&#10;&gt; 3&#10;1s have passed since system startup&#10;Number of roads: 2&#10;Interval: 2&#10;Press &quot;Enter&quot; to open menu&#10;&gt; &#10;Menu:&#10;1. Add road&#10;2. Delete road&#10;3. Open system&#10;0. Quit&#10;&gt; 1&#10;input: &#10;&gt; n3w_v3ry_unu5u4l_r04d_n4m3_1&#10;n3w_v3ry_unu5u4l_r04d_n4m3_1 added!&#10;&gt; &#10;Menu:&#10;1. Add road&#10;2. Delete road&#10;3. Open system&#10;0. Quit&#10;&gt; 3&#10;2s have passed since system startup&#10;Number of roads: 2&#10;Interval: 2&#10;n3w_v3ry_unu5u4l_r04d_n4m3_1&#10;Press &quot;Enter&quot; to open menu&#10;&gt; &#10;Menu:&#10;1. Add road&#10;2. Delete road&#10;3. Open system&#10;0. Quit&#10;&gt; 1&#10;input: &#10;&gt; n3w_v3ry_unu5u4l_r04d_n4m3_2&#10;n3w_v3ry_unu5u4l_r04d_n4m3_2 added!&#10;&gt; &#10;Menu:&#10;1. Add road&#10;2. Delete road&#10;3. Open system&#10;0. Quit&#10;&gt; 3&#10;3s have passed since system startup&#10;Number of roads: 2&#10;Interval: 2&#10;n3w_v3ry_unu5u4l_r04d_n4m3_1&#10;n3w_v3ry_unu5u4l_r04d_n4m3_2&#10;Press &quot;Enter&quot; to open menu&#10;&gt; &#10;Menu:&#10;1. Add road&#10;2. Delete road&#10;3. Open system&#10;0. Quit&#10;&gt; 1&#10;input: &#10;&gt; n3w_v3ry_unu5u4l_r04d_n4m3_3&#10;queue is full&#10;&gt; &#10;Menu:&#10;1. Add road&#10;2. Delete road&#10;3. Open system&#10;0. Quit&#10;&gt; 3&#10;4s have passed since system startup&#10;Number of roads: 2&#10;Interval: 2&#10;n3w_v3ry_unu5u4l_r04d_n4m3_1&#10;n3w_v3ry_unu5u4l_r04d_n4m3_2&#10;Press &quot;Enter&quot; to open menu&#10;&gt; &#10;Menu:&#10;1. Add road&#10;2. Delete road&#10;3. Open system&#10;0. Quit&#10;&gt; 2&#10;n3w_v3ry_unu5u4l_r04d_n4m3_2 deleted!&#10;&gt; &#10;Menu:&#10;1. Add road&#10;2. Delete road&#10;3. Open system&#10;0. Quit&#10;&gt; 3&#10;5s have passed since system startup&#10;Number of roads: 2&#10;Interval: 2&#10;n3w_v3ry_unu5u4l_r04d_n4m3_1&#10;Press &quot;Enter&quot; to open menu" type="java.lang.AssertionError">java.lang.AssertionError: Wrong answer in test #12
 
 Between settings lines and the line, that asks user to press Enter to show options, there should be printed all elements in queue from front to rear, containing elements' names in such order.
@@ -122,10 +122,8 @@ n3w_v3ry_unu5u4l_r04d_n4m3_1
 Press &quot;Enter&quot; to open menu
 	at org.junit.Assert.fail(Assert.java:89)
 	at org.hyperskill.hstest.stage.StageTest.start(StageTest.java:208)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
@@ -147,10 +145,8 @@ Press &quot;Enter&quot; to open menu
 	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:40)
 	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:60)
 	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:52)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
 	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
 	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)

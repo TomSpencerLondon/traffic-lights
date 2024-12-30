@@ -34,10 +34,9 @@ public class Printer {
 
         // Print queue details
         if (!roads.isEmpty()) {
-            // Convert to array and print in reverse order
-            Road[] roadArray = roads.toArray(new Road[0]);
-            for (int i = 0; i < roadArray.length; i++) {
-                System.out.println(roadArray[i].getName());
+            // Print in original order (front to rear)
+            for (int i = roads.size() - 1; i >= 0; i--) {
+                System.out.println(roads.get(i).getName());
             }
         }
 

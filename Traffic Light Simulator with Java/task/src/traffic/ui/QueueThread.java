@@ -30,8 +30,8 @@ public class QueueThread extends Thread {
             Printer.printQueueFull();
         } else {
             Road newRoad = new Road(roadName, interval);
-            roads.addFirst(newRoad);  // Add to end
-            displayOrder.add(newRoad);
+            roads.addLast(newRoad);  // Add to end to match RoadQueue
+            displayOrder.add(newRoad);  // Add to end of display order
             roadQueue.add(roadName);
 
             if (roads.size() == 1) {
@@ -46,13 +46,13 @@ public class QueueThread extends Thread {
         if (roads.isEmpty()) {
             Printer.printQueueIsEmpty();
         } else {
-            Road removedRoad = roads.removeLast();  // Remove from front
-            displayOrder.remove(removedRoad);
+            Road removedRoad = roads.removeFirst();  // Remove from front to match RoadQueue
+            displayOrder.remove(0);  // Remove from front of display order
             roadQueue.remove();
             Printer.printDeleted(removedRoad.getName());
 
             if (!roads.isEmpty()) {
-                Road nextRoad = roads.peekLast();
+                Road nextRoad = roads.peekFirst();  // Peek at front
                 nextRoad.setOpen(true);
                 nextRoad.setTimeRemaining(interval);
             }
@@ -72,19 +72,23 @@ public class QueueThread extends Thread {
                     }
                 }
 
-                Road frontRoad = roads.peekLast();
+                Road frontRoad = roads.peekFirst();  // Peek at front
 
                 if (frontRoad != null && frontRoad.getTimeRemaining() <= 0) {
-                    roads.removeLast();
+                    roads.removeFirst();  // Remove from front
                     frontRoad.setOpen(false);
                     frontRoad.setTimeRemaining(interval * roads.size());
-                    roads.addFirst(frontRoad);  // Keep using add() for roads
+                    roads.addLast(frontRoad);  // Add to end
 
                     // Update roadQueue in same order
                     roadQueue.remove();
                     roadQueue.add(frontRoad.getName());
 
-                    Road nextRoad = roads.peekLast();
+                    // Update displayOrder to match
+                    displayOrder.remove(0);  // Remove from front
+                    displayOrder.add(frontRoad);  // Add to end
+
+                    Road nextRoad = roads.peekFirst();  // Peek at front
 
                     if (nextRoad != null) {
                         nextRoad.setOpen(true);

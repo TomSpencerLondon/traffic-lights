@@ -420,4 +420,142 @@
 Press "Enter" to open menu
 > 
 Menu:
-1. A
+1. Add road
+2. Delete road
+3. Open system
+0. Quit
+> 1
+input: 
+> n3w_v3ry_unu5u4l_r04d_n4m3_4
+$n3w_v3ry_unu5u4l_r04d_n4m3_4 added!
+> 
+Menu:
+1. Add road
+2. Delete road
+3. Open system
+0. Quit
+> 3
+$5s have passed since system startup
+Number of roads: 1
+Interval: 1
+n3w_v3ry_unu5u4l_r04d_n4m3_4
+Press "Enter" to open menu
+> 
+Menu:
+1. Add road
+2. Delete road
+3. Open system
+0. Quit
+> 0
+Bye!
+[1;31m
+Start test 12[0m
+*Welcome to the traffic management system!
+Input the number of roads: > 2
+Input the interval: > 2
+Menu:
+1. Add road
+2. Delete road
+3. Open system
+0. Quit
+> 2
+queue is empty
+> 
+Menu:
+1. Add road
+2. Delete road
+3. Open system
+0. Quit
+> 3
+$1s have passed since system startup
+Number of roads: 2
+Interval: 2
+Press "Enter" to open menu
+> 
+Menu:
+1. Add road
+2. Delete road
+3. Open system
+0. Quit
+> 1
+input: 
+> n3w_v3ry_unu5u4l_r04d_n4m3_1
+$n3w_v3ry_unu5u4l_r04d_n4m3_1 added!
+> 
+Menu:
+1. Add road
+2. Delete road
+3. Open system
+0. Quit
+> 3
+$2s have passed since system startup
+Number of roads: 2
+Interval: 2
+n3w_v3ry_unu5u4l_r04d_n4m3_1
+Press "Enter" to open menu
+> 
+Menu:
+1. Add road
+2. Delete road
+3. Open system
+0. Quit
+> 1
+input: 
+> n3w_v3ry_unu5u4l_r04d_n4m3_2
+$n3w_v3ry_unu5u4l_r04d_n4m3_2 added!
+> 
+Menu:
+1. Add road
+2. Delete road
+3. Open system
+0. Quit
+> 3
+$3s have passed since system startup
+Number of roads: 2
+Interval: 2
+n3w_v3ry_unu5u4l_r04d_n4m3_1
+n3w_v3ry_unu5u4l_r04d_n4m3_2
+Press "Enter" to open menu
+> 
+Menu:
+1. Add road
+2. Delete road
+3. Open system
+0. Quit
+> 1
+input: 
+> n3w_v3ry_unu5u4l_r04d_n4m3_3
+queue is full
+> 
+Menu:
+1. Add road
+2. Delete road
+3. Open system
+0. Quit
+> 3
+$4s have passed since system startup
+Number of roads: 2
+Interval: 2
+n3w_v3ry_unu5u4l_r04d_n4m3_1
+n3w_v3ry_unu5u4l_r04d_n4m3_2
+Press "Enter" to open menu
+> 
+Menu:
+1. Add road
+2. Delete road
+3. Open system
+0. Quit
+> 2
+&n3w_v3ry_unu5u4l_r04d_n4m3_2 deleted!
+> 
+Menu:
+1. Add road
+2. Delete road
+3. Open system
+0. Quit
+> 3
+$5s have passed since system startup
+Number of roads: 2
+Interval: 2
+n3w_v3ry_unu5u4l_r04d_n4m3_1
+Press "Enter" to open menu
